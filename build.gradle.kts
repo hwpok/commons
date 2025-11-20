@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.github.hwpok"
-version = "1.0.2"
+version = "1.0.0"
 
 repositories {
     mavenCentral()
@@ -31,8 +31,6 @@ dependencies {
 tasks.withType<JavaCompile> {
     options.encoding = "UTF-8"
     options.release.set(21)
-    sourceCompatibility = "21"
-    targetCompatibility = "21"
 }
 publishing {
     publications {

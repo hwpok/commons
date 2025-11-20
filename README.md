@@ -44,6 +44,34 @@ FilePathUtils, FileUtils, ImageUtils, ZipUtils
 ### System Utilities
 ClassScanner, LruCache, SingleAppLock, SqlUtils
 
+## How to Use
+#### In Maven:
+```agsl
+  <repositories>
+    <repository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+      </repository>
+    </repositories>
+    <dependencies>
+      <dependency>
+        <groupId>com.github.hwpok</groupId>
+        <artifactId>commons</artifactId>
+        <version>1.0.0</version>
+      </dependency>
+    </dependencies>
+```
+#### In Gradle
+```agsl
+    repositories {
+      mavenCentral()
+      maven { url = uri("https://jitpack.io") }
+    }
+    dependencies {
+      implementation("com.github.hwpok:commons:1.0.0")
+    }
+```
+
 
 
 

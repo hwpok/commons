@@ -10,6 +10,13 @@ repositories {
     mavenCentral()
 }
 
+java {
+    withSourcesJar()
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+    }
+}
+
 dependencies {
     compileOnly("org.projectlombok:lombok:1.18.42")
     annotationProcessor("org.projectlombok:lombok:1.18.42")
@@ -23,28 +30,10 @@ dependencies {
 
 tasks.withType<JavaCompile> {
     options.encoding = "UTF-8"
+    options.release.set(21)
+    sourceCompatibility = "21"
+    targetCompatibility = "21"
 }
-
-// Javadoc编码配置
-tasks.withType<Javadoc> {
-    (options as StandardJavadocDocletOptions).apply {
-        addStringOption("encoding", "UTF-8")
-        addStringOption("docEncoding", "UTF-8")
-        addStringOption("charset", "UTF-8")
-        addStringOption("Xdoclint:none", "-quiet")
-
-        if (JavaVersion.current().isJava9Compatible) {
-            addBooleanOption("html5", true)
-        }
-    }
-}
-
-
-java {
-    withSourcesJar()
-    withJavadocJar()
-}
-
 publishing {
     publications {
         create<MavenPublication>("maven") {
@@ -60,7 +49,6 @@ publishing {
 tasks.named("javadoc") {
     enabled = false
 }
-
 
 tasks.test {
     useJUnitPlatform()

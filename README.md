@@ -57,7 +57,7 @@ ClassScanner, LruCache, SingleAppLock, SqlUtils
       <dependency>
         <groupId>com.github.hwpok</groupId>
         <artifactId>commons</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.6</version>
       </dependency>
     </dependencies>
 ```
@@ -68,7 +68,7 @@ ClassScanner, LruCache, SingleAppLock, SqlUtils
       maven { url = uri("https://jitpack.io") }
     }
     dependencies {
-      implementation("com.github.hwpok:commons:1.0.0")
+      implementation("com.github.hwpok:commons:1.0.6")
     }
 ```
 

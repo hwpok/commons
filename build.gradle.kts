@@ -3,8 +3,8 @@ plugins {
     id("maven-publish")
 }
 
-group = "com.hwpok"
-version = "1.0.1"
+group = "com.github.hwpok"
+version = "1.0.2"
 
 repositories {
     mavenCentral()
@@ -37,10 +37,7 @@ tasks.withType<JavaCompile> {
 publishing {
     publications {
         create<MavenPublication>("maven") {
-            groupId = "com.hwpok"
             artifactId = "commons"
-            version = "1.0.1"
-
             from(components["java"])
         }
     }

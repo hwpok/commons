@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.hwpok"
-version = "1.0.0"
+version = "1.0.1"
 
 repositories {
     mavenCentral()
@@ -39,7 +39,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "com.hwpok"
             artifactId = "commons"
-            version = "1.0.0"
+            version = "1.0.1"
 
             from(components["java"])
         }
